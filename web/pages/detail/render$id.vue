@@ -23,7 +23,7 @@ import Search from '@/components/search/index.vue'
 import { DetailData } from '~/typings/data'
 
 const props = defineProps<{
-  reactiveFetchData: {value:DetailData}
+  reactiveFetchData: { value: DetailData }
 }>()
 
 const detailStore = useDetailStore()
