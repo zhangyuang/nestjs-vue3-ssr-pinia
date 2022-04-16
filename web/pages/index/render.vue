@@ -12,19 +12,12 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from 'vue'
 import { useIndexStore } from '@/pinia-store'
-import { IndexData } from '~/typings/data'
 import Slider from '@/components/slider/index.vue'
 import Rectangle from '@/components/rectangle/index.vue'
 import Search from '@/components/search/index.vue'
 
-const props = defineProps<{
-  reactiveFetchData: {value: IndexData}
-}>()
 const indexStore = useIndexStore()
-indexStore.setData(props.reactiveFetchData.value)
-
 const indexData = indexStore.data
 
 </script>

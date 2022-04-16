@@ -1,9 +1,10 @@
 
 import { defineStore } from 'pinia'
+import { IndexData } from '~/typings/data'
 
 export const useIndexStore = defineStore('indexStore', {
   state: () => {
-    return { data: {} }
+    return { data: {} } as IndexData
   },
   actions: {
     setData (payload: any) {
