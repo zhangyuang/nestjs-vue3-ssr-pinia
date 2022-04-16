@@ -1,12 +1,6 @@
 export interface Ddata {
-  detailData?: {
-    data: DetailData[]
-  }
+  data: [{dataNode: PlayerDataNode[]}, {dataNode: BriefDataNode[]}, {dataNode: RecommendDataNode[]}, ]
 }
-export interface DetailData {
-  dataNode: RecommendDataNode[] | PlayerDataNode[] | BriefDataNode[]
-}
-
 export interface PlayerDataNode {
   data: {
     img: string
