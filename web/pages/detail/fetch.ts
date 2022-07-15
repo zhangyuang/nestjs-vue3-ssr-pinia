@@ -1,16 +1,8 @@
-import { Store } from 'vuex'
-import { RouteLocationNormalizedLoaded } from 'vue-router'
-import { Pinia } from 'pinia'
 import { ISSRNestContext } from 'ssr-types'
-import { Ddata } from '~/typings/data'
+import { Ddata, Params } from '~/typings/data'
 import { useDetailStore } from '@/pinia-store'
 interface ApiDeatilservice {
   index: (id: string) => Promise<Ddata>
-}
-interface Params {
-  store: Store<any>
-  router: RouteLocationNormalizedLoaded,
-  pinia: Pinia
 }
 export default async ({ store, router, pinia }: Params, ctx?: ISSRNestContext<{
   apiDeatilservice?: ApiDeatilservice

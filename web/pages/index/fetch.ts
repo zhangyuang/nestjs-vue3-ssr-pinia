@@ -1,17 +1,9 @@
-import { Store } from 'vuex'
-import { RouteLocationNormalizedLoaded } from 'vue-router'
 import { ISSRNestContext } from 'ssr-types'
-import { Pinia } from 'pinia'
-import { IndexData } from '~/typings/data'
+import { IndexData, Params } from '~/typings/data'
 import { useIndexStore } from '@/pinia-store'
 
 interface IApiService {
   index: () => Promise<IndexData>
-}
-interface Params {
-  store: Store<any>
-  router: RouteLocationNormalizedLoaded,
-  pinia: Pinia
 }
 
 export default async ({ store, router, pinia }: Params, ctx?: ISSRNestContext<{
